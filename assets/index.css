@@ -1,0 +1,270 @@
+:root,body{
+    height: 100%;
+}
+#app{
+    height: 100%;
+    overflow-y: scroll;
+}
+.header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 10px;
+    background-color:#fff;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    /* background-color: red; */
+    z-index: 3;
+}
+.header .logo{
+    margin-left: 18px;
+}
+.header .search-input{
+    width: 132px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    background-color: #f4f4f4;
+    border-radius: 12px;
+    color: #999;
+}
+.header .search-input span{
+    padding-left: 2px;
+    font-size:10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.header .search-input svg{
+    margin-left: 10px;
+}
+.header .avatar svg {
+    border-radius: 50%;
+}
+.header .download-app{
+    -webkit-user-drag: 78px;
+    height: 23px;
+    background-color:#fb7299;
+    line-height: 23px;
+    text-align: center;
+    padding-left:10px;
+    padding-right:10px;
+    font-size: 12px;
+    border-radius: 4px;
+    color:#fff;
+    margin-right: 10px;
+}
+.nav-box{
+    position:fixed;
+    top:54px;
+    left: 0px;
+    right: 0;
+    background-color: #fff;
+    z-index: 1;
+}
+.nav-box .nav-list{
+    width: 85%;
+    white-space: nowrap;
+    overflow-x: scroll;
+    padding-left: 24px;
+}
+.nav-box .nav-list::-webkit-scrollbar{
+    display: none;
+}
+.nav-box .nav{
+    display: inline-block;
+    height: 30px;
+    line-height:30px;
+    margin-right: 40px;
+    font-size: 14px;
+    color: #757575;
+    border-bottom:2px solid transparent;
+}
+.nav-box .down{
+    position: absolute;
+    right: 10px;
+    top: -2px;
+}
+.nav-box .nav.active{
+    border-color: #fb7299;
+    color: #fb7299;
+}
+.hide-nav-box{
+    position: fixed;
+    top: 54px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 1;
+    transition: top .3s;
+    padding-bottom: 20px;
+    /* background-color: turquoise; */
+}
+.hide-nav-box .nav {
+    display: inline-block;
+    width: 32px;
+    text-align: center;
+    margin-left: 14px;
+    margin-right: 14px;
+    margin-bottom: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 14px;
+    color: #757575;
+    border-bottom: 2px solid transparent;
+}
+.hide-nav-box.hide {
+    top: -117px;
+}
+.hide-nav-box .nav.big {
+    width: 46px;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+.hide-nav-box .nav.active {
+    border-color: #fb7299;
+    color: #fb7299;
+}
+.hide-nav-box .up{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.banner-box{
+    position: relative;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px;
+    height: 110px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.banner-box .banner-list{
+    position: absolute;
+    left: 0;
+    width: calc(350px *4);
+    transition: left .5s;
+}
+.banner-box .banner-list .banner{
+    float: left;
+    width: 350px;
+    height: 110px;
+}
+.banner-box .banner-list .banner .poster{
+    width: 100%;
+    height: 100%;
+}
+.banner-box .index-list{
+    position: absolute;
+    display: flex;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 5px;
+    bottom: 3px;
+    left: 50%;
+    height: 10px;
+    align-items: center;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.banner-box .index-list .index{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    margin-left: 3px;
+    margin-right: 3px;
+    background-color: #fff;
+}
+.banner-box .index.active {
+    background-color: #fb7299;
+}
+.video-box{
+    padding-top: 100px;
+    /* background-color: red; */
+    padding-left: 6px;
+    padding-right: 6px;
+}
+.video-box .video-list::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+.video-box .video {
+    float: left;
+    width: 50%;
+    /* background-color: green; */
+}
+.video-box .poster{
+    position: relative;
+    height: 106px;
+    margin-right: 6px;
+    margin-left: 6px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.video-box .poster img {
+    width: 100%;
+    height: 100%;
+}
+.video-box .poster .info{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 20px;
+    font-size: 12px;
+    right: 0;
+    color: #fff;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-top: 7px;
+    background-image: linear-gradient(rgba(33, 33, 33, 0), rgba(33, 33, 33, .5));
+
+}
+.video-box .poster .info div{
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.video-box .info svg {
+    margin-right: 3px;
+    width: 14px;
+    height: 14px;
+    fill:#fff;
+}
+.video-box .title{
+    margin: 6px 6px 10px 6px;
+    height: 38px;
+    line-height: 20px;
+    font-size: 13px;
+    /* 单行文本溢出打点：
+    设置文本不换行
+    white-space: nowrap;
+    设置文字溢出用省略号代替
+    text-overflow: ellipsis; */
+    /* 多行文本溢出打点： */
+    overflow: hidden;
+    /* 设置盒子为伸缩盒 */
+    display: -webkit-box;
+    /* 设置伸缩盒内子元素的排列方式为vertical */
+    -webkit-box-orient: vertical;
+    /* 限制一个块元素内显示的文本行数 */
+    -webkit-line-clamp: 2;
+}
+.footer{
+    margin-top: 40px;
+}
+.footer p {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 13px;
+    color: #999;
+  }
